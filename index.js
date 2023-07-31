@@ -30,9 +30,10 @@ server.use(morgan('common'));
 // })
 
 // Router Applying
-const productRouter = require('./router/Route')
+const productRouter = require('./router/Product')
+const userRouter = require('./router/User')
 server.use('/',productRouter.router)
-
+server.use('/',userRouter.router)
 // server.post('/',auth,(req,res)=>{
 //     res.json({type:"POST"})
 // })
